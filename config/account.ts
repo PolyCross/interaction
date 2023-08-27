@@ -1,12 +1,15 @@
 import dotenv from "dotenv";
-import { Hex } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 dotenv.config();
 
 export const token_deployer = privateKeyToAccount(
-  process.env.PrivateKey_Token_Depolyer as Hex
+  `0x${process.env.PrivateKey_Token_Depolyer}`
 );
 
 export const contract_deployer = privateKeyToAccount(
-  process.env.PrivateKey_Contract_Depolyer as Hex
+  `0x${process.env.PrivateKey_Contract_Depolyer}`
+);
+
+export const dev_account = privateKeyToAccount(
+  `0x${process.env.PrivateKey_Dev_Account}`
 );
