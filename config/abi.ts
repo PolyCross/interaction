@@ -17,7 +17,8 @@ const temp_bridge = [
 export const Bridge_ABI = parseAbi(temp_bridge)
 
 const temp_bridge_swap = [
-    "function initPool(address tokenA, address tokenB, uint256 amountA, uint256 amountB,address to) external returns (uint256 share)"
+    "function addLiquidity(address tokenA, address tokenB, uint256 amountA, uint256 amountB, address to) public returns (uint256 share)",
+    "function removeLiquidity(address tokenA, address tokenB, uint256 liquidity, address to) external returns (uint256 amount0, uint256 amount1)"
 ]
 
 export const BridgeSwap_ABI = parseAbi(temp_bridge_swap)
